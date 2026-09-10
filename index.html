@@ -14,60 +14,60 @@
 
 
 </head>
-<img src="./assets/logo.gif" alt="money-logo" class="logo">
-<main>
-<label></label>
-    Convert <b>from</b>:
-    <select class="currency-from">
-        <option>R$ Brazilian Real</option>
-        <option>U$ Us Dollar</option>
-        <option>Eu$ Euro</option>
-        <option>L$ Libra</option>
-        <option>A$ Australian Dollar</option>
+<body>
+    <img src="./assets/logo.gif" alt="money-logo" class="logo">
+    <main>
+        <label for="currency-from">Convert <b>from</b>:</label>
+        <select id="currency-from" class="currency-from">
+            <option value="BRL">Brazilian Real</option>
+        <option value="USD">US Dollar</option>
+        <option value="EUR">Euro</option>
+        <option value="GBP">British Pound</option>
+        <option value="AUD">Australian Dollar</option>
     </select>
-    
-    <label></label>
-    Convert <b>to</b>:
-    <select class="currency-to">
-        <option>R$ Brazilian Real</option>
-        <option>U$ Us Dollar</option>
-         <option>Eu$ Euro</option>
-        <option>L$ Libra</option>
-        <option>A$ Australian Dollar</option>
-        
-        
+
+    <label for="currency-to">Convert <b>to</b>:</label>
+    <select id="currency-to" class="currency-to">
+        <option value="BRL">Brazilian Real</option>
+        <option value="USD" selected>US Dollar</option>
+        <option value="EUR">Euro</option>
+        <option value="GBP">British Pound</option>
+        <option value="AUD">Australian Dollar</option>
     </select>
-    
+
+
     <label>
-        <input class="input-amount"  placeholder="Enter Amount">
+        <input class="input-amount" placeholder="Enter Amount">
     </label>
 
     <button class="convert-button">Convert</button>
 
     <section>
         <div class="currency-box">
-            <img src="./assets/brasil.png" alt="brazil-flag">
-            <p class="currency">Brazilian Real</p>
+            <img class="currency-image-from" src="./assets/brasil.png" alt="Brazilian Real">
+            <p class="currency currency-name-from">Brazilian Real</p>
             <p class="amount-to-convert">R$ 0.00</p>
         </div>
 
+
+
         <div class="arrow">
             <img src="./assets/arrow.png" alt="arrow">
-
         </div>
 
-        <div class="currency-box">
-             <img src="./assets/eua.png" alt="usa-flag">
-            <p class="currency">US Dollar</p>
-            <p class="amount-converted">U$ 0.00</p>
-        </div>
+            <div class="currency-box">
+                <img class="currency-image-to" src="./assets/eua.png" alt="US Dollar">
+                <p class="currency currency-name-to">US Dollar</p>
+                <p class="amount-converted">US$ 0.00</p>
+            </div>
+
+
+
+
 
     </section>
 
 </main>
-    
-
-<body>
 
 </body>
 

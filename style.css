@@ -112,3 +112,10 @@ section {
     font-weight: 700;
 
 }
+
+.currency-image-from,
+.currency-image-to {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
