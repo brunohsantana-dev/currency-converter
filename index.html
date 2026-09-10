@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script> <!-- defer is used to load the script after the HTML is loaded -->
+    <title>Currency Converter</title>
+
+
+</head>
+<img src="./assets/logo.gif" alt="money-logo" class="logo">
+<main>
+<label></label>
+    Convert <b>from</b>:
+    <select>
+        <option>R$ Brazilian Real</option>
+        <option>U$ Us Dollar</option>
+        <option>Eu$ Euro</option>
+        <option>L$ Libra</option>
+        <option>A$ Australian Dollar</option>
+    </select>
+    
+    <label></label>
+    Convert <b>to</b>:
+    <select>
+        <option>R$ Brazilian Real</option>
+        <option>U$ Us Dollar</option>
+        
+        
+    </select>
+    
+    <label>
+        <input class="input-amount"  placeholder="Enter Amount">
+    </label>
+
+    <button class="convert-button">Convert</button>
+
+    <section>
+        <div class="currency-box">
+            <img src="./assets/brasil.png" alt="brazil-flag">
+            <p class="currency">Brazilian Real</p>
+            <p class="amount-to-convert">R$ 0.00</p>
+        </div>
+
+        <div class="arrow">
+            <img src="./assets/arrow.png" alt="arrow">
+
+        </div>
+
+        <div class="currency-box">
+             <img src="./assets/eua.png" alt="usa-flag">
+            <p class="currency">US Dollar</p>
+            <p class="amount-converted">U$ 0.00</p>
+        </div>
+
+    </section>
+
+</main>
+    
+
+<body>
+
+</body>
+
+</html>
