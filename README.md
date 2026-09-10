@@ -1,6 +1,7 @@
 💱 Currency Converter
 
 🌐 Acesse o projeto / View live demo
+https://brunohsantana-dev.github.io/currency-converter/
 
 Conversor de moedas com visual neon vaporwave, desenvolvido com HTML, CSS e JavaScript.
 
