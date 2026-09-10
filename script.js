@@ -79,6 +79,8 @@ function changeCurrencyFrom() {
         currencyNameFrom,
         currencyImageFrom
     );
+
+    refreshConversion();
 }
 
 function changeCurrencyTo() {
@@ -87,6 +89,8 @@ function changeCurrencyTo() {
         currencyNameTo,
         currencyImageTo
     );
+
+    refreshConversion();
 }
 
 currencyFromSelect.addEventListener("change", changeCurrencyFrom);
@@ -95,3 +99,37 @@ currencyToSelect.addEventListener("change", changeCurrencyTo);
 // Match the boxes to the initial selections
 changeCurrencyFrom();
 changeCurrencyTo();
+
+
+function refreshConversion() {
+    const inputValue = document.querySelector(".input-amount").value;
+
+    if (inputValue.trim() !== "") {
+        convertCurrency();
+    }
+}
+
+const swapButton = document.querySelector(".swap-button");
+
+function swapCurrencies() {
+    const previousFrom = currencyFromSelect.value;
+
+    currencyFromSelect.value = currencyToSelect.value;
+    currencyToSelect.value = previousFrom;
+
+    updateCurrencyBox(
+        currencyFromSelect.value,
+        currencyNameFrom,
+        currencyImageFrom
+    );
+
+    updateCurrencyBox(
+        currencyToSelect.value,
+        currencyNameTo,
+        currencyImageTo
+    );
+
+    refreshConversion();
+}
+
+swapButton.addEventListener("click", swapCurrencies);

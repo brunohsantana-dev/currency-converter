@@ -119,3 +119,165 @@ section {
     height: 44px;
     object-fit: contain;
 }
+
+/* Neon vaporwave theme */
+body {
+    background-color: #0b1020;
+}
+
+main {
+    background-color: #161d30;
+}
+
+label,
+.currency {
+    color: #bfc9df;
+}
+
+select,
+input {
+    background-color: #0e1526;
+    border-color: #41516b;
+    color: #f0f5ff;
+}
+
+input::placeholder {
+    color: #a2aec5;
+}
+
+button {
+    background: linear-gradient(100deg, #23f4ea, #ff4fbd);
+    color: #0b1020;
+}
+
+section {
+    border-color: #23f4ea;
+}
+
+.amount-to-convert,
+.amount-converted {
+    color: #f0f5ff;
+}
+
+.logo {
+    width: 180px;
+}
+
+.arrow img {
+    width: 40px;
+    height: 50px;
+}
+
+select:focus-visible,
+input:focus-visible,
+button:focus-visible {
+    outline: 2px solid #23f4ea;
+    outline-offset: 3px;
+}
+
+/* Neon glow behind currency images */
+.currency-image-from {
+    filter: drop-shadow(0 0 6px rgba(35, 244, 234, 0.55));
+}
+
+.currency-image-to {
+    filter: drop-shadow(0 0 6px rgba(255, 79, 189, 0.55));
+}
+
+main {
+    border: 1px solid rgba(35, 244, 234, 0.4);
+    box-shadow:
+        0 0 15px rgba(35, 244, 234, 0.15),
+        0 0 40px rgba(35, 244, 234, 0.08);
+}
+
+/* Responsive page spacing */
+body {
+    padding: 20px 16px 40px;
+}
+
+.logo {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 24px;
+}
+
+/* Flexible main card */
+main {
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 30px 24px;
+}
+
+label {
+    display: block;
+}
+
+/* Keep long results inside their boxes */
+.currency-box {
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+}
+
+.amount-to-convert,
+.amount-converted {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+/* Comfortable touch targets */
+select,
+input {
+    min-height: 48px;
+    padding: 10px 12px;
+    font-size: 16px;
+}
+
+button {
+    min-height: 48px;
+}
+
+/* Small phones */
+@media screen and (max-width: 360px) {
+    main {
+        padding: 24px 16px;
+    }
+
+    .logo {
+        width: 140px;
+    }
+
+    section {
+        margin-top: 24px;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) {
+    body {
+        padding: 32px 24px 48px;
+    }
+
+    main {
+        max-width: 420px;
+        padding: 32px;
+    }
+}
+
+.swap-button {
+    width: 100%;
+    margin-bottom: 24px;
+    background: transparent;
+    border: 1px solid #23f4ea;
+    color: #23f4ea;
+    font-size: 14px;
+}
+
+.swap-button:hover {
+    background: rgba(35, 244, 234, 0.08);
+    opacity: 1;
+}
+
