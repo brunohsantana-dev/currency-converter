@@ -1,290 +1,135 @@
-💱 Currency Converter
+# 💱 Currency Converter
 
-🌐 Acesse o projeto / View live demo
+A responsive currency converter built with vanilla JavaScript, featuring multiple currencies, input validation, currency swapping and formatted results.
+
+🔗 **Live Demo:**  
 https://brunohsantana-dev.github.io/currency-converter/
 
-Conversor de moedas com visual neon vaporwave, desenvolvido com HTML, CSS e JavaScript.
+---
 
-A currency converter with a neon vaporwave design, built with HTML, CSS, and JavaScript.
+## About the project
 
-🇧🇷 Português
+This project started as a guided JavaScript exercise and was expanded into a more complete currency conversion interface.
 
-Sobre o projeto
+The original version converted Brazilian reais to US dollars using a fixed exchange rate. I extended it to support multiple currencies, independent source and target selections, currency swapping, validation and responsive behavior.
 
-Este projeto começou como um exercício guiado do DevClub, convertendo reais para dólares com uma cotação fixa.
+The visual identity was also redesigned with a neon / vaporwave-inspired interface.
 
-Depois, decidi ir além das aulas e experimentar novas funcionalidades e uma identidade visual própria. Com apoio de IA para explicações e desenvolvimento, expandi a conversão para outras moedas, conectei a interface às seleções do usuário e criei um tema neon com detalhes em ciano e rosa.
+> Exchange rates in this version are fixed and used for learning purposes. The application does not currently connect to a live currency API.
 
-Funcionalidades
+---
 
-Conversão entre cinco moedas:
+## ✨ Key features
 
-Real brasileiro — BRL
+- Conversion between BRL, USD, EUR, GBP and AUD
+- Independent source and target currency selection
+- Currency swap button
+- Automatic recalculation when selections change
+- Dynamic currency names and images
+- Input validation
+- Currency formatting with `Intl.NumberFormat`
+- Responsive layout for desktop and mobile
 
-Dólar americano — USD
+---
 
-Euro — EUR
+## ⚙️ How it works
 
-Libra esterlina — GBP
+Each currency has a fixed reference value based on Brazilian reais.
 
-Dólar australiano — AUD
+The application first converts the entered amount to BRL and then converts that value into the selected target currency.
 
-Seleção independente da moeda de origem e destino.
+**Calculation:**
 
-Atualização dos nomes e das imagens ao trocar as moedas.
+`Amount in BRL = entered amount × source rate`
 
-Botão para inverter origem e destino.
+`Converted amount = amount in BRL ÷ target rate`
 
-Recálculo ao mudar a seleção, quando o campo de valor está preenchido.
+The result is then formatted with `Intl.NumberFormat` using the appropriate currency identifier.
 
-Conversão pelo botão Convert.
+---
 
-Formatação monetária com Intl.NumberFormat.
+## 🧠 What I practiced
 
-Validação de campo vazio, valores inválidos e números negativos.
+- DOM manipulation
+- Event handling
+- Functions and parameters
+- Conditional logic
+- Objects
+- Form inputs and selects
+- Input validation
+- Number conversion
+- `Intl.NumberFormat`
+- Dynamic content updates
+- Responsive CSS
+- Git and GitHub workflow
+- Deployment with GitHub Pages
 
-Layout adaptável para celulares, tablets e computadores.
+---
 
-Ao inverter as moedas, o valor digitado é mantido e a conversão é recalculada.
+## 🛠️ Technologies
 
-Identidade visual
+- HTML5
+- CSS3
+- JavaScript
+- Git
+- GitHub
+- GitHub Pages
 
-O layout inicial da aula ganhou uma personalização inspirada em neon vaporwave:
+No JavaScript frameworks or libraries were used.
 
-Fundo escuro com detalhes em ciano e rosa.
+---
 
-Botão principal com gradiente.
+## 🎨 Design
 
-Logo neon criada com IA.
+The original exercise interface was redesigned with a neon vaporwave-inspired visual style using:
 
-Seta em SVG.
+- Dark backgrounds
+- Cyan and magenta accents
+- Gradient elements
+- Glow effects
+- Custom currency visuals
 
-Brilho suave nas imagens das moedas e no card principal.
+The goal was to take a simple JavaScript exercise and turn it into a more complete and visually consistent web experience.
 
-Como o cálculo funciona
+---
 
-As cotações são fixas e ilustrativas, usadas apenas para fins de estudo. O projeto ainda não consulta uma API.
+## 📌 Project scope
 
-Cada moeda possui um valor de referência em reais. A conversão passa pela moeda brasileira antes de chegar ao destino:
+This is a learning project built during my JavaScript studies.
 
-Valor em reais = valor digitado × cotação da origem
-Valor convertido = valor em reais ÷ cotação do destino
+The current version intentionally uses fixed exchange rates. A future version may explore live exchange-rate data after I progress further into APIs and asynchronous JavaScript.
 
-Os resultados são formatados no padrão brasileiro, com o identificador da moeda correspondente.
+AI tools were used as support for explanations, development guidance and visual asset creation while I built and expanded the project.
 
-Tecnologias
+---
 
-HTML5
+<details>
+<summary><strong>🇧🇷 Sobre o projeto em português</strong></summary>
 
-CSS3
+<br>
 
-JavaScript
+**Currency Converter** é um conversor de moedas desenvolvido durante meus estudos de JavaScript.
 
-Google Fonts — Roboto
+O projeto começou como um exercício guiado de conversão entre real e dólar e depois foi expandido para suportar cinco moedas:
 
-Git e GitHub
+- Real brasileiro — BRL
+- Dólar americano — USD
+- Euro — EUR
+- Libra esterlina — GBP
+- Dólar australiano — AUD
 
-GitHub Pages
+Também foram adicionados seleção independente das moedas, inversão entre origem e destino, validações, atualização dinâmica da interface e layout responsivo.
 
-O que pratiquei
+As cotações utilizadas nesta versão são fixas e ilustrativas. O projeto ainda não utiliza uma API de câmbio em tempo real.
 
-Estruturação de campos com labels, inputs e selects.
+O projeto foi desenvolvido com HTML, CSS e JavaScript puro.
 
-Seleção de elementos com querySelector.
+</details>
 
-Leitura e alteração de valores com .value.
+---
 
-Manipulação de textos, imagens e atributos.
+## 👨‍💻 Author
 
-Eventos click e change.
+**Bruno Santana**
 
-Funções, parâmetros e condições.
-
-Objetos para organizar cotações.
-
-Conversão e validação de números.
-
-Formatação com Intl.NumberFormat.
-
-Estilização com gradientes, sombras e media queries.
-
-Versionamento com commits, branches e pull requests.
-
-Publicação de uma página com GitHub Pages.
-
-Próximos passos
-
-Conforme eu avançar nos estudos, pretendo:
-
-Buscar cotações atualizadas em uma API.
-
-Exibir a data de atualização das cotações.
-
-Tratar carregamento e falhas de conexão.
-
-Substituir os alertas por mensagens de validação na página.
-
-Melhorar a entrada de valores com vírgula decimal.
-
-Revisar a acessibilidade e testar o layout em mais dispositivos.
-
-Organizar melhor o código e adicionar testes para os cálculos.
-
-A integração com uma API ficou para uma próxima etapa, depois de estudar requisições e JavaScript assíncrono.
-
-Como executar
-
-Acesse a demonstração online ou baixe o repositório.
-
-Para executar localmente, abra index.html no navegador.
-
-Escolha as moedas e digite um valor.
-
-Clique em Convert.
-
-Nesta versão, use ponto para valores decimais, como 10.50.
-
-Créditos
-
-Projeto iniciado a partir de um exercício do DevClub e expandido durante meus estudos, com apoio de IA para explicações, desenvolvimento e criação da logo.
-
-🇺🇸 English
-
-About the project
-
-This project started as a guided DevClub exercise, converting Brazilian reais to US dollars using a fixed exchange rate.
-
-I then decided to go beyond the lessons and explore additional features and a visual identity of my own. With AI assistance for explanations and development, I added more currencies, connected the interface to the user’s selections, and created a neon theme with cyan and pink accents.
-
-Features
-
-Conversion between five currencies:
-
-Brazilian real — BRL
-
-US dollar — USD
-
-Euro — EUR
-
-British pound — GBP
-
-Australian dollar — AUD
-
-Independent source and target currency selection.
-
-Currency names and images that update when selections change.
-
-A button to swap the source and target currencies.
-
-Automatic recalculation when a selection changes and the amount field is filled.
-
-Conversion through the Convert button.
-
-Currency formatting with Intl.NumberFormat.
-
-Validation for empty fields, invalid values, and negative numbers.
-
-Responsive layout for phones, tablets, and desktops.
-
-Swapping currencies keeps the entered amount and recalculates the conversion.
-
-Visual design
-
-The original lesson layout was customized with a neon vaporwave aesthetic:
-
-Dark background with cyan and pink accents.
-
-A gradient primary button.
-
-An AI-generated neon logo.
-
-An SVG arrow.
-
-Subtle glow effects around currency images and the main card.
-
-How the calculation works
-
-Exchange rates are fixed and illustrative, for learning purposes only. The project does not currently use an API.
-
-Each currency has a reference value in Brazilian reais. The calculation converts the source amount to BRL before converting it to the target currency:
-
-Amount in BRL = entered amount × source rate
-Converted amount = amount in BRL ÷ target rate
-
-Results use Brazilian number formatting with the appropriate currency identifier.
-
-Technologies
-
-HTML5
-
-CSS3
-
-JavaScript
-
-Google Fonts — Roboto
-
-Git and GitHub
-
-GitHub Pages
-
-What I practiced
-
-Structuring fields with labels, inputs, and selects.
-
-Selecting elements with querySelector.
-
-Reading and updating values with .value.
-
-Updating text, images, and attributes.
-
-Handling click and change events.
-
-Functions, parameters, and conditional statements.
-
-Using objects to organize exchange rates.
-
-Number conversion and validation.
-
-Formatting with Intl.NumberFormat.
-
-Styling with gradients, shadows, and media queries.
-
-Version control with commits, branches, and pull requests.
-
-Publishing a page with GitHub Pages.
-
-Next steps
-
-As I progress through my studies, I plan to:
-
-Retrieve updated exchange rates from an API.
-
-Display when exchange rates were last updated.
-
-Handle loading states and connection errors.
-
-Replace alerts with validation messages on the page.
-
-Improve support for decimal comma input.
-
-Review accessibility and test the layout on more devices.
-
-Improve code organization and add calculation tests.
-
-API integration is planned for a later stage, after I study network requests and asynchronous JavaScript.
-
-How to run
-
-Visit the live demo or download the repository.
-
-To run locally, open index.html in your browser.
-
-Select the currencies and enter an amount.
-
-Click Convert.
-
-In this version, use a period for decimal values, such as 10.50.
-
-Credits
-
-Started from a DevClub exercise and expanded during my studies, with AI assistance for explanations, development, and logo creation.
+[LinkedIn](https://www.linkedin.com/in/brunohsantana) · [GitHub](https://github.com/brunohsantana-dev)
